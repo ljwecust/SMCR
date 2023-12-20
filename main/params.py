@@ -8,7 +8,7 @@ __dataset_type = 'wikimel'
 
 
 """num of parallel processes"""
-__num_cut = 20
+__num_cut = 10
 
 
 """openai KEY"""
