@@ -1,1 +1,7 @@
 *.json filter=lfs diff=lfs merge=lfs -text
+main filter=lfs diff=lfs merge=lfs -text
+visual_expert filter=lfs diff=lfs merge=lfs -text
+README.md filter=lfs diff=lfs merge=lfs -text
+dataset_WIKIMEL filter=lfs diff=lfs merge=lfs -text
+dataset_wikidiverse filter=lfs diff=lfs merge=lfs -text
+llm_utils filter=lfs diff=lfs merge=lfs -text
