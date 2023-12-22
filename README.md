@@ -5,6 +5,8 @@
 
 `/dataset_WIKIMEL/result` and `/dataset_wikidiverse/result` contain the output results
 
+The processed test set is stored in: ``
+
 
 ### evaluate:
 First, configure the settings in the `/main/params.py` file, such as entering the OpenAI key and specifying the output file name. 
