@@ -5,8 +5,13 @@
 
 `/dataset_WIKIMEL/result` and `/dataset_wikidiverse/result` contain the output results
 
-The processed test set is stored in: ``
+The processed test set also stored in: `https://drive.google.com/drive/folders/1ixE207sdigEF4U_5Hax_KcAG9CxthxjA?usp=sharing`
 
+put `WikiMEL_testset.json` and `WikiMEL_testset_label.json` into `/dataset_WIKIMEL`
+
+put `WikiDiverse_testset.json` and `WikiDiverse_testset_label.json` into `/dataset_wikidiverse`
+
+put `WikiMEL_testset_score.json` and `WikiDiverse_testset_score.json` into `/dataset_wikidiverse/visual_expert/output`
 
 ### evaluate:
 First, configure the settings in the `/main/params.py` file, such as entering the OpenAI key and specifying the output file name. 
