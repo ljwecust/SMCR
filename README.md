@@ -5,7 +5,7 @@
 
 `/dataset_WIKIMEL/result` and `/dataset_wikidiverse/result` contain the output results
 
-The processed test set also stored in: `https://drive.google.com/drive/folders/1ixE207sdigEF4U_5Hax_KcAG9CxthxjA?usp=sharing`
+The processed test set also stored in: https://drive.google.com/drive/folders/1ixE207sdigEF4U_5Hax_KcAG9CxthxjA?usp=sharing
 
 put `WikiMEL_testset.json` and `WikiMEL_testset_label.json` into `/dataset_WIKIMEL`
 
