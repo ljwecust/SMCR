@@ -1,3 +1,7 @@
+# SMCR
+
+Download all code and data: [SMCR_all.zip](https://drive.google.com/file/d/1plqHyvXFzU__xWxbORomYAQ2jNfRBOiP/view?usp=sharing)
+
 ### folders and files:
 `./dataset_WIKIMEL`and `./dataset_wikidiverse` contains the pre-processed input datasets, which could be downloaded from [MELBench](https://github.com/seukgcode/MELBench) and [WikiDiverse](https://github.com/wangxw5/wikidiverse). Use `./main/get_mention_img_info.py` to get different types of descriptions
 
