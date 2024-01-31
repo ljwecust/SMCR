@@ -17,14 +17,14 @@ Download all code and data: [SMCR_all.zip](https://drive.google.com/drive/folder
 
 Our proposed SMCR consists of four key steps. (1) Target Entity Selection. (2) Semantic Consistency Reflection(SCR). (3) Inter-Modal Consistency Verification. and (4) Visual Iterative Feedback. Steps (3) and (4) together form the Modality Consistency Reflection (MCR). The left column shows the details of each step.
 
-## Folders and Files:
+## Folders and Files
 `./dataset_WIKIMEL/`: The provide preprocessed data of WIKIMEL.  
 `./dataset_wikidiverse/` The provide preprocessed data of WikiDiverse.  
 `./dataset_WIKIMEL/result/` & `./dataset_wikidiverse/result/`: The evaluation results are saved here.  
 `./llm_utils/prompts`: All prompts used in interacting with the LLM  
 
 ## Dataset
-In this study, we employ the test sets from the following two datasets for evaluation: [MELBench](https://github.com/seukgcode/MELBench) and [WikiDiverse](https://github.com/wangxw5/wikidiverse).
+In this study, we employ the testsets from the following two datasets for evaluation: [MELBench](https://github.com/seukgcode/MELBench) and [WikiDiverse](https://github.com/wangxw5/wikidiverse).
 
 ## Data procession
 The processed input datasets are stored in `./dataset_WIKIMEL` and `./dataset_wikidiverse`.
@@ -33,7 +33,7 @@ Alternatively, you can download the raw datasets from [MELBench](https://github.
 
 The precomputed scores of the CLIP model are stored in `./visual_expert/output`. You can also obtain these through the `./visual_expert/ve_score.py` script.
 
-## Evaluate:
+## Evaluate
 
 **Step 1**: In the `./main/params.py` file, set the openai-key and specify the dataset (e.g., 'wikimel' or 'wikidiverse') for evaluation.
 
