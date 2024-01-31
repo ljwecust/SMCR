@@ -1,21 +1,48 @@
 # SMCR
+This is the official github repository for the paper "Integrating Large Language Models in Multimodal Entity Linking: A Novel Two-Level Reflection Framework".
 
 Download all code and data: [SMCR_all.zip](https://drive.google.com/drive/folders/1TN_-nUqfv8V9nIPVT1O_vgoE4pNEnkgh?usp=sharing)
 
-### folders and files:
-`./dataset_WIKIMEL`and `./dataset_wikidiverse` contains the pre-processed input datasets, which could be downloaded from [MELBench](https://github.com/seukgcode/MELBench) and [WikiDiverse](https://github.com/wangxw5/wikidiverse). Use `./main/get_mention_img_info.py` to get different types of descriptions
+## Contents
+- [SMCR](#SMCR)
+  - [Contents](#contents)
+  - [Overview](#overview)
+  - [Folders and Files](#folders-and-files)
+  - [Dataset](#dataset)
+  - [Data procession](#data-procession)
+  - [Evaluate](#evaluate)
 
-The processed test set also stored in [here](https://drive.google.com/drive/folders/1TN_-nUqfv8V9nIPVT1O_vgoE4pNEnkgh?usp=sharing)
+## Overview
+<img src="SMCR.jpg"/>
 
-put `WikiMEL_testset.json` and `WikiMEL_testset_label.json` into `./dataset_WIKIMEL`
+Our proposed SMCR consists of four key steps. (1) Target Entity Selection. (2) Semantic Consistency Reflection(SCR). (3) Inter-Modal Consistency Verification. and (4) Visual Iterative Feedback. Steps (3) and (4) together form the Modality Consistency Reflection (MCR). The left column shows the details of each step.
 
-put `WikiDiverse_testset.json` and `WikiDiverse_testset_label.json` into `./dataset_wikidiverse`
+## Folders and Files:
+`./dataset_WIKIMEL/`: The provide preprocessed data of WIKIMEL.  
+`./dataset_wikidiverse/` The provide preprocessed data of WikiDiverse.  
+`./dataset_WIKIMEL/result/` & `./dataset_wikidiverse/result/`: The evaluation results are saved here.  
+`./llm_utils/prompts`: All prompts used in interacting with the LLM  
 
-put `WikiMEL_testset_score.json` and `WikiDiverse_testset_score.json` into `./dataset_wikidiverse/visual_expert/output`
+## Dataset
+In this study, we employ the test sets from the following two datasets for evaluation: [MELBench](https://github.com/seukgcode/MELBench) and [WikiDiverse](https://github.com/wangxw5/wikidiverse).
 
-### evaluate:
-First, in the `./main/params.py` file, set the openai-key, specify the output file name, and specify the dataset for evaluation.
+## Data procession
+The processed input datasets are stored in `./dataset_WIKIMEL` and `./dataset_wikidiverse`.
+<!-- The processed test set also stored in [here](https://drive.google.com/drive/folders/1TN_-nUqfv8V9nIPVT1O_vgoE4pNEnkgh?usp=sharing) -->
+Alternatively, you can download the raw datasets from [MELBench](https://github.com/seukgcode/MELBench) and [WikiDiverse](https://github.com/wangxw5/wikidiverse), and use the `./main/get_mention_img_info.py` to obtain different types of descriptions for mention images.
 
-Second, running the `./main/run_main.py` script for prediction.
+The precomputed scores of the CLIP model are stored in `./visual_expert/output`. You can also obtain these through the `./visual_expert/ve_score.py` script.
+
+## Evaluate:
+
+**Step 1**: In the `./main/params.py` file, set the openai-key and specify the dataset (e.g., 'wikimel' or 'wikidiverse') for evaluation.
+
+**Step 2**: Use the following command for prediction:
+```
+>>> cd main
+>>> python run_main.py
+```
+
+If you want to use other model interfaces provided by OpenAI, please modify the model name in line 9 of the `llm_utils/askGPT.py` file.
 
 The results are saved in `/dataset_WIKIMEL/result` and `/dataset_wikidiverse/result`
